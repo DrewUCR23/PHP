@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Engineering And AI Quiz</title>
+    <!-- Styles and icon code go here -->
+      <!--- this will be for the icon---> 
+      <style>
+        .gear {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            background: #ccc;
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px #ccc, 0 0 0 16px #1b1b1b;
+        }
+
+        .gear:before, .gear:after {
+            content: "";
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            background: #1b1b1b;
+            border-radius: 50%;
+        }
+
+        .gear:after {
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+        }
+
+        .gear div {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: #1b1b1b;
+        }
+
+        .gear div:before, .gear div:after {
+            content: "";
+            position: absolute;
+            top: -6px; bottom: -6px;
+            left: -6px; right: -6px;
+            margin: auto;
+            border: 8px solid #ccc;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+        }
+
+        .gear div:after {
+            top: 6px; bottom: 6px;
+            left: 6px; right: 6px;
+            border-width: 6px;
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+        </style> 
+
+    <!-- Styles and icon code go here -->
+    <style>
+    body {
+        font-family: 'Courier New', monospace;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #1b1b1b;
+        color: #f0f0f0;
+    }
+    
+    header {
+        background-color: #333;
+        color: #f0f0f0;
+        padding: 20px; 
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        color: #f0f0f0;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    nav ul li a:hover {
+        background-color: #666;
+    }
+
+    main {
+        background-color: #333;
+        margin: 20px;
+        padding: 20px;
+        padding-bottom: 50px;  /* Adjust this value to the height of your footer. */
+        border-radius: 10px;
+    }
+
+    main h2 {
+        color: #f0f0f0;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+    }
+
+    main p {
+        color: #f0f0f0;
+    }
+
+    footer {
+            background-color: #333;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            height: 50px;  /* Set this value to the height of your footer. */
+            width: 100%;
+        }
+
+    img  {
+        max-width: 100%;
+        height: auto; 
+    }
+</style>
+</head>
+<!---call the gear into the main part of the website accordingly-->
+<div class="gear">
+    <div></div>
+    </div>
+<body>
+    <header>
+        <h1>Engineering and AI Quiz</h1>
+        <nav>
+            <ul>
+            <li><a href="HOME.html">Home</a></li>
+            <li><a href="BLOG.html">Blog</a></li>
+            <li><a href="CONTACTPAGE.html">Contact</a></li>
+            <li><a href="SIGNIN.html">Sign In Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Quiz</h2>
+        <form id="quiz-form" method="POST" action="QUIZ.php">
+
+            <p>Please enter your first name:</p>
+            <input type="text" id="first-name" name="first-name" required><br>
+
+            <p>Please enter your last name:</p>
+            <input type="text" id="last-name" name="last-name" required><br>
+
+            <!-- Quiz questions go here --> <h2>Quiz</h2>
+        <form id="quiz-form" method="POST" action="QUIZ.php">
+            <p>1. Do you enjoy problem-solving?</p>
+            <input type="radio" id="q1-yes" name="q1" value="yes">
+            <label for="q1-yes">Yes</label><br>
+            <input type="radio" id="q1-no" name="q1" value="no">
+            <label for="q1-no">No</label><br>
+
+            <p>2. Are you interested in how things work?</p>
+            <input type="radio" id="q2-yes" name="q2" value="yes">
+            <label for="q2-yes">Yes</label><br>
+            <input type="radio" id="q2-no" name="q2" value="no">
+            <label for="q2-no">No</label><br>
+
+            <p>3. Do you enjoy mathematics?</p>
+            <input type="radio" id="q3-yes" name="q3" value="yes">
+            <label for="q3-yes">Yes</label><br>
+            <input type="radio" id="q3-no" name="q3" value="no">
+            <label for="q3-no">No</label><br>
+
+            <p>4. Are you interested in creating solutions that can impact society?</p>
+            <input type="radio" id="q4-yes" name="q4" value="yes">
+            <label for="q4-yes">Yes</label><br>
+            <input type="radio" id="q4-no" name="q4" value="no">
+            <label for="q4-no">No</label><br>
+
+            <p>5. Do you find the concept of AI fascinating?</p>
+            <input type="radio" id="q5-yes" name="q5" value="yes">
+            <label for="q5-yes">Yes</label><br>
+            <input type="radio" id="q5-no" name="q5" value="no">
+            <label for="q5-no">No</label><br>
+
+            <p>6. Do you enjoy learning about new technologies?</p>
+            <input type="radio" id="q6-yes" name="q6" value="yes">
+            <label for="q6-yes">Yes</label><br>
+            <input type="radio" id="q6-no" name="q6" value="no">
+            <label for="q6-no">No</label><br>
+
+            <p>7. Are you interested in coding and software development?</p>
+            <input type="radio" id="q7-yes" name="q7" value="yes">
+            <label for="q7-yes">Yes</label><br>
+            <input type="radio" id="q7-no" name="q7" value="no">
+            <label for="q7-no">No</label><br>
+
+            <p>8. Do you like working in teams to solve complex tasks?</p>
+            <input type="radio" id="q8-yes" name="q8" value="yes">
+            <label for="q8-yes">Yes</label><br>
+            <input type="radio" id="q8-no" name="q8" value="no">
+            <label for="q8-no">No</label><br>
+
+            <p>9. Would you be interested in designing systems to optimize processes?</p>
+            <input type="radio" id="q9-yes" name="q9" value="yes">
+            <label for="q9-yes">Yes</label><br>
+            <input type="radio" id="q9-no" name="q9" value="no">
+            <label for="q9-no">No</label><br>
+
+            <p>10. Would you like to create technologies that can change the world?</p>
+            <input type="radio" id="q10-yes" name="q10" value="yes">
+            <label for="q10-yes">Yes</label><br>
+            <input type="radio" id="q10-no" name="q10" value="no">
+            <label for="q10-no">No</label><br>
+        
+            <input type="submit" value="Submit Quiz">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Engineering and AI Quiz</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+   
+    <!--- this is going to be for the icon-->
+    <style>
+        .gear {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            background: #ccc;
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px #ccc, 0 0 0 16px #1b1b1b;
+        }
+
+        .gear:before, .gear:after {
+            content: "";
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            background: #1b1b1b;
+            border-radius: 50%;
+        }
+
+        .gear:after {
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+        }
+
+        .gear div {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: #1b1b1b;
+        }
+
+        .gear div:before, .gear div:after {
+            content: "";
+            position: absolute;
+            top: -6px; bottom: -6px;
+            left: -6px; right: -6px;
+            margin: auto;
+            border: 8px solid #ccc;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+        }
+
+        .gear div:after {
+            top: 6px; bottom: 6px;
+            left: 6px; right: 6px;
+            border-width: 6px;
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+
+    </style>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1b1b1b;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        main {
+            background-color: #333;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button, input[type="submit"] {
+            background-color: #666;
+            color: #f0f0f0;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button:hover, input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #register-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="gear">
+        <div></div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="HOME.html">Home</a></li>
+                <li><a href="BLOG.html">Blog</a></li>
+                <li><a href="CONTACTPAGE.html">Contact</a></li>
+                <li><a href="ABOUTPAGE.html">About</a></li>
+                <li><a href="QUIZ.html">Engineering Quiz!</a></li>
+
+            </ul>
+        </nav>
+        <h1>Sign in or Register</h1>
+    </header>
+
+    <main>
+        <!-- Sign in form -->
+        <form action="auth.php" method="post">
+            <input type="hidden" name="action" value="signin">
+            <label for="signin-email">Email:</label><br>
+            <input type="email" id="signin-email" name="email" required><br>
+            <label for="signin-password">Password:</label><br>
+            <input type="password" id="signin-password" name="password" required><br>
+            <input type="submit" value="Sign in">
+        </form>
+        
+        <button id="register-button">Register</button>
+
+      <!-- Registration form -->
+<form id="register-form" action="auth.php" method="post">
+    <input type="hidden" name="action" value="register">
+    <label for="register-username">Username:</label><br>
+    <input type="text" id="register-username" name="username" required><br>
+    <label for="register-email">Email:</label><br>
+    <input type="email" id="register-email" name="email" required><br>
+    <label for="register-password">Password:</label><br>
+    <input type="password" id="register-password" name="password" required><br>
+    <label for="confirm-password">Confirm Password:</label><br>
+    <input type="password" id="confirm-password" name="confirm_password" required><br>
+    <input type="submit" value="Register">
+</form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Engineering & AI Blog. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('register-button').addEventListener('click', function() {
+            document.getElementById('register-form').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

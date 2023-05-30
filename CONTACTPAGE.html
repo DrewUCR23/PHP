@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering and AI Contact Page</title>
+
+    <!--- this is going to be for the icon-->
+    <style>
+        .gear {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            background: #ccc;
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px #ccc, 0 0 0 16px #1b1b1b;
+        }
+
+        .gear:before, .gear:after {
+            content: "";
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            background: #1b1b1b;
+            border-radius: 50%;
+        }
+
+        .gear:after {
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+        }
+
+        .gear div {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: #1b1b1b;
+        }
+
+        .gear div:before, .gear div:after {
+            content: "";
+            position: absolute;
+            top: -6px; bottom: -6px;
+            left: -6px; right: -6px;
+            margin: auto;
+            border: 8px solid #ccc;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+        }
+
+        .gear div:after {
+            top: 6px; bottom: 6px;
+            left: 6px; right: 6px;
+            border-width: 6px;
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+
+    </style>
+
+    <style> 
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1b1b1b;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        main {
+            background-color: #333333;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+            padding: 0.5em;
+            background-color: #555;
+            border: none;
+            color: #f0f0f0;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #666;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #888;
+        }
+
+        footer {
+            background-color: #333;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class = "gear">
+        <!---it is worthy of noting that all 3 of divs stop the header from going all the way to the bottom and coering the design.-->
+        <div></div>
+        </div>
+    <header>
+        <h1>Contact Engineering & AI</h1>
+        <nav>
+            <ul>
+                <li><a href="HOME.html">Home</a></li>
+                <li><a href="ABOUTPAGE.HTML">About</a></li>
+                <li><a href="BLOG.html">Blog</a></li>
+                <li><a href="SIGNIN.html">Sign In Page Or Register</a></li>
+                <li><a href="QUIZ.html">Engineering Quiz!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="CONTACT.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 Engineering & AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+    function submitForm() {
+        document.querySelector('.contact-form').submit();
+    }
+    </script>
+</body>
+</html>

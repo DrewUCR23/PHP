@@ -1,0 +1,213 @@
+.gear {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #ccc, 0 0 0 16px #1b1b1b;
+}
+
+.gear:before, .gear:after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background: #1b1b1b;
+    border-radius: 50%;
+}
+
+.gear:after {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+}
+
+.gear div {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: #1b1b1b;
+}
+
+.gear div:before, .gear div:after {
+    content: "";
+    position: absolute;
+    top: -6px; bottom: -6px;
+    left: -6px; right: -6px;
+    margin: auto;
+    border: 8px solid #ccc;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+}
+
+.gear div:after {
+    top: 6px; bottom: 6px;
+    left: 6px; right: 6px;
+    border-width: 6px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+textarea {
+    width: 80vw; /* vw stands for Viewport Width. */
+    height: 80vh; /* vh stands for Viewport Height. */
+    box-sizing: border-box; /* This is to include padding and border in element's total width and height*/
+}
+
+#new-blog-content {
+    height: 800px; /* Adjust this to your preference */
+    font-family: "Courier New", monospace; /* A font that looks 'engineery' */
+    background-color: #333; 
+    color: #fff; 
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#new-blog-title {
+    font-family: "Courier New", monospace;
+    background-color: #333; 
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#new-blog-author {
+    font-family: "Courier New", monospace;
+    background-color: #333; 
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    font-family: "Courier New", monospace;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 20px; 
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+}
+
+main {
+    background-color: #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+main h2 {
+    color: #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+main p, time, a {
+    color: #f0f0f0;
+}
+
+aside {
+    background-color: #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+aside h2 {
+    color: #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+aside p, ul li a {
+    color: #f0f0f0;
+}
+
+footer {
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #666;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Engineering Forum</title>
+
+<!---this will be for the gear icon accordingly-->
+<style>
+    .gear {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background: #ccc;
+        border-radius: 50%;
+        box-shadow: 0 0 0 8px #ccc, 0 0 0 16px #1b1b1b;
+    }
+
+    .gear:before, .gear:after {
+        content: "";
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        background: #1b1b1b;
+        border-radius: 50%;
+    }
+
+    .gear:after {
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+    }
+
+    .gear div {
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        background: #1b1b1b;
+    }
+
+    .gear div:before, .gear div:after {
+        content: "";
+        position: absolute;
+        top: -6px; bottom: -6px;
+        left: -6px; right: -6px;
+        margin: auto;
+        border: 8px solid #ccc;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+    }
+
+    .gear div:after {
+        top: 6px; bottom: 6px;
+        left: 6px; right: 6px;
+        border-width: 6px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        header {
+            background-color: #555;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 3px solid #00ff00;
+        }
+    }
+    
+    </style>
+    <!--- this is for the other styling of the other part of the css -->
+    <style>
+    
+    body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1b1b1b;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        main {
+            background-color: #333333;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+        }
+    </style>
+</head>
+<body>
+    <div class="gear">
+        <div></div>
+    </div> <!-- This is the correct position of closing tag -->
+
+    <header>
+        <h1>Engineering & AI</h1>
+        <nav>
+            <ul>
+                <li><a href="ABOUTPAGE.html">About</a></li>
+                <li><a href="BLOG.html">Blog</a></li>
+                <li><a href="CONTACTPAGE.html">Contact</a></li>
+                <li><a href="SIGNIN.html">Sign In Page Or Register</a></li>
+                <li><a href="QUIZ.html">Engineering Quiz!</a></li>
+                <li><a href="FORUM.html">DISCUSSION FORUM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="header">
+        <h1>Welcome to Engineering Forum</h1>
+    </div>
+
+    <!-- Registration -->
+    <div class="form-section">
+        <h2>Register</h2>
+        <form method="post" action="register.php">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <!-- Login -->
+    <div class="form-section">
+        <h2>Login</h2>
+        <form method="post" action="login.php">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <div class="forums-section">
+        <h2>Forums</h2>
+        <ul>
+            <li><a href="ai_forum.php">AI Forum</a></li>
+            <li><a href="engineering_forum.php">Engineering Forum</a></li>
+            <li><a href="general_discussion_forum.php">General Discussions</a></li>
+            <li><a href="random_forum.php">Random Forum</a></li>
+        </ul>
+    </div>
+    <!-- New Topic -->
+    <div class="form-section">
+        <h2>Create a Topic</h2>
+        <form method="post" action="create_topic.php">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="submit" value="Create Topic">
+        </form>
+    </div>
+
+    <!-- Topic List -->
+    <div class="topics-section">
+        <h2>Topics</h2>
+        <ul>
+            <li><a href="topic.php?id=1">Topic 1</a></li>
+            <li><a href="topic.php?id=2">Topic 2</a></li>
+            <!-- etc. -->
+        </ul>
+    </div>
+</body>
+</html>
+
